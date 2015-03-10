@@ -1,4 +1,4 @@
-## tianma-static
+# tianma-static
 
 Static middleware for Tianma
 
@@ -29,8 +29,10 @@ node config.js
 
 ### Options
 
-* source
+#### source
+
 Type: String
+
 default:''
 
 Config static request data source.
@@ -38,7 +40,7 @@ Config static request data source.
 
 ### Release History
 
-* 2015-03-10  v1.0.0  First release.
+* 2015-03-10            v1.0.0            First release.
 
 
 ### LICENSE
