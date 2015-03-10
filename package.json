@@ -1,0 +1,29 @@
+{
+  "name": "tianma-static",
+  "description": "Static middleware for Tianma",
+  "version": "1.0.0",
+  "author": {
+    "name": "windyge",
+    "email": "gxll1314@gmail.com"
+  },
+  "keywords": [
+    "framework",
+    "tianma"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tianmajs/tianma-static.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "co-fs": "~1.2.0"
+  },
+  "engines": {
+    "node": ">=0.11.0"
+  },
+  "main": "lib/index.js",
+  "bugs": {
+    "url": "https://github.com/tianmajs/tianma-static/issues"
+  },
+  "homepage": "https://github.com/tianmajs/tianma-static"
+}
