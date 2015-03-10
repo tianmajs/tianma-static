@@ -21,6 +21,9 @@
   "engines": {
     "node": ">=0.11.0"
   },
+  "scripts": {
+    "test": "mocha --harmony"
+  },
   "main": "lib/index.js",
   "bugs": {
     "url": "https://github.com/tianmajs/tianma-static/issues"
