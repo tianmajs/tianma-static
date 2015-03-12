@@ -1,5 +1,7 @@
 # tianma-static
 
+![build status](https://travis-ci.org/tianmajs/tianma-static.svg?branch=master)
+
 Static middleware for Tianma
 
 ### Getting Started
@@ -12,36 +14,51 @@ If you haven't install `tianma-static` before, Please install plugin with this c
 npm install tianma-static
 ```
 
-Once `tianma-static` has been installed, then create a file named `config.js` for this plugin.
+
+### Example
+
+#### Create a static http service.
 
 ```javascript
 var tianma = require('tianma'),
     static = require('tianma-static');
 
-tianma(80).use(static('./htdocs'));
-```
-
-Now run this this command:
-
-```javascript
-node config.js
+tianma(8080).use(static('./htdocs'));
 ```
 
 ### Options
 
-#### source
+#### root
 
 Type: String
 
-default:''
+default:'./'
 
-Config static request data source.
+Static request data source.
 
+#### base
 
-### Release History
+Type: String
 
-* 2015-03-10            v1.0.0            First release.
+default: ''
 
+Virtual path for request pathname.
+
+#### autoIndex
+
+Type: Boolean
+
+default: false
+
+Automatically index files and directory.
+
+#### indexes
+
+Type: Array
+
+default: []
+
+Show the pages when access directory.
 
 ### LICENSE
 
