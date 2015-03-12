@@ -50,7 +50,7 @@ describe('tianma-static', function(){
     });
 
     it('should support forbidden index service', function(done){
-        var oApp = createApp({autoIndex: false}, 4000);
+        var oApp = createApp({autoIndex: false}, 4001);
 
         request(oApp.run)
             .get('/css')
