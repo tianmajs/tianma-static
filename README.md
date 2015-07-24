@@ -1,4 +1,4 @@
-# tianma-mount
+# tianma-static
 
 ![build status](https://travis-ci.org/tianmajs/tianma-static.svg?branch=master)
 
