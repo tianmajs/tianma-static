@@ -1,65 +1,59 @@
-# tianma-static
+# tianma-mount
 
 ![build status](https://travis-ci.org/tianmajs/tianma-static.svg?branch=master)
 
-Static middleware for Tianma
+提供静态文件服务。
 
-### Getting Started
+## 安装
 
-This plugin requires Tianma `>=1.0.0`
+    $ npm install tianma-static
 
-If you haven't install `tianma-static` before, Please install plugin with this command
+## 使用
 
-```javascript
-npm install tianma-static
-```
+### 根目录
 
+默认配置下，使用工作目录作为根目录。
 
-### Example
+    var tianma = require('tianma');
 
-#### Create a static http service.
+    tianma(8080)
+        .static();
 
-```javascript
-var tianma = require('tianma'),
-    static = require('tianma-static');
+可以使用简洁配置指定根目录。
 
-tianma(8080).use(static('./htdocs'));
-```
+    var tianma = require('tianma');
 
-### Options
+    tianma(8080)
+        .static('./htdocs');
 
-#### root
+也可以使用完整配置指定根目录。
 
-Type: String
+    var tianma = require('tianma');
 
-default:'./'
+    tianma(8080)
+        .static({ root: './htdocs' });
 
-Static request data source.
+### 目录列表
 
-#### base
+当请求的是一个目录时，默认返回目录下的文件列表。可通过以下方式禁用该功能。
 
-Type: String
+    var tianma = require('tianma');
 
-default: ''
+    tianma(8080)
+        .static({ root: './htdocs', indexes: false });
 
-Virtual path for request pathname.
+### 默认文件
 
-#### autoIndex
+当请求的是一个目录时，请求可以被自动重定向到默认的文件上。不存在默认文件时，则返回目录下的文件列表。
 
-Type: Boolean
+    var tianma = require('tianma');
 
-default: false
+    tianma(8080)
+        .static({
+            root: './htdocs',
+            indexes: [ 'index.html', 'default.html' ]
+        });
 
-Automatically index files and directory.
+## 授权协议
 
-#### indexes
-
-Type: Array
-
-default: []
-
-Show the pages when access directory.
-
-### LICENSE
-
-MIT
+[MIT](https://github.com/tianmajs/tianmajs.github.io/blob/master/LICENSE)

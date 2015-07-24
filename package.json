@@ -1,13 +1,11 @@
 {
   "name": "tianma-static",
-  "description": "Static middleware for Tianma",
-  "version": "1.0.0",
-  "author": {
-    "name": "windyge",
-    "email": "gxll1314@gmail.com"
-  },
+  "description": "Serve static files",
+  "version": "1.0.1",
+  "author": "Nanqiao Deng <nqdeng@gmail.com>",
   "keywords": [
-    "framework",
+    "static",
+	"middleware",
     "tianma"
   ],
   "repository": {
@@ -16,23 +14,18 @@
   },
   "license": "MIT",
   "dependencies": {
-    "co-fs": "~1.2.0",
-    "debug": "^2.1.2"
+    "co-fs": "~1.2.0"
+  },
+  "devDependencies": {
+    "mocha": "~2.2.5",
+    "supertest": "^0.15.0",
+    "tianma": "~1.0.0"
   },
   "engines": {
-    "node": ">=0.11.0"
-  },
-  "scripts": {
-    "test": "mocha --harmony"
+    "node": ">=0.12.0"
   },
   "main": "index.js",
-  "bugs": {
-    "url": "https://github.com/tianmajs/tianma-static/issues"
-  },
-  "homepage": "https://github.com/tianmajs/tianma-static",
-  "devDependencies": {
-    "mocha": "^2.2.1",
-    "supertest": "^0.15.0",
-    "tianma": "~1.0.0-r0"
+  "scripts": {
+    "test": "mocha --harmony"
   }
 }
