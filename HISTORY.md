@@ -1,9 +1,13 @@
-## 1.0.1 / 2015-07-24
-
-+ change the author
-+ refine all code
-+ simplify the design
-
 ## 1.0.0 / 2015-03-10
 
-+ first release
++ 首次发布
+
+## 1.0.1 / 2015-07-24
+
++ 重构代码
++ 简化模块设计
+
+## 1.0.2 / 2015-07-27
+
++ 放弃`let`，改用`var`，以规避低版本NodeJS中的bug。
+

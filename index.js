@@ -53,8 +53,8 @@ function *list(base, dir, filenames) {
     var d = [ '..' ];
     var f = [];
 
-    for (let i = 0, len = filenames.length; i < len; ++i) {
-        let stats = yield fs.stat(path.join(dir, filenames[i]));
+    for (var i = 0, len = filenames.length; i < len; ++i) {
+        var stats = yield fs.stat(path.join(dir, filenames[i]));
         if (stats.isDirectory()) {
             d.push(filenames[i] + '/');
         } else {
