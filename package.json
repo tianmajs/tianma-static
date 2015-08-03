@@ -1,7 +1,7 @@
 {
   "name": "tianma-static",
   "description": "Serve static files",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Nanqiao Deng <nqdeng@gmail.com>",
   "keywords": [
     "static",

@@ -54,11 +54,16 @@ function *list(base, dir, filenames) {
     var f = [];
 
     for (var i = 0, len = filenames.length; i < len; ++i) {
-        var stats = yield fs.stat(path.join(dir, filenames[i]));
-        if (stats.isDirectory()) {
-            d.push(filenames[i] + '/');
-        } else {
-            f.push(filenames[i]);
+        var filename = filenames[i];
+        var stats;
+
+        if (filename[0] !== '.') { // Skip hidden files.
+            stats = yield fs.stat(path.join(dir, filename));
+            if (stats.isDirectory()) {
+                d.push(filename + '/');
+            } else {
+                f.push(filename);
+            }
         }
     }
 
